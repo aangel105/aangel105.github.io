@@ -11,7 +11,7 @@ var students = [
   "Eric",
   "Janette",
   "Desmond",
-  "Ashiya",
+  "Asiya",
   "Monica",
   "Susana",
   "Deborah",
@@ -50,7 +50,20 @@ document.addEventListener('DOMContentLoaded', () => {
     ul.innerText = students[i];
     aList.append(ul);
   }
+
+
 });
+
+function randomNoRepeats(students) {
+  var copy = students.slice(0);
+  return function() {
+    if (copy.length < 1) { copy = students.slice(0); }
+    var index = Math.floor(Math.random() * copy.length);
+    var item = copy[index];
+    copy.splice(index, 1);
+    return item;
+  };
+}
 
 var pickOnClick = function (event) {
   choice.innerHTML = '&nbsp;'
@@ -73,4 +86,3 @@ var aListOnClick = function (event) {
     event.target.style.textDecoration = 'line-through';
   }
 }
-
