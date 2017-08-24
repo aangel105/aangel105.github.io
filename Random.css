@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-size: 24px;
+  font-size: 36px;
   width: 25em;
   margin: 0 auto;
   padding: 0.5em 0;
@@ -17,7 +17,7 @@ body {
 }
 
 button {
-  font-size: 24px;
+  font-size: 36px;
   font-family: monospace;
 }
 
