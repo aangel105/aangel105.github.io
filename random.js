@@ -1,5 +1,5 @@
 var pickButton;
-var NothingButton
+var pairButton
 var header;
 var body;
 var choice;
@@ -41,13 +41,13 @@ document.addEventListener('DOMContentLoaded', () => {
   body = document.getElementById('body');
   header = document.getElementById('header');
   pickButton = document.getElementById('pickButton');
-  NothingButton = document.getElementById('NothingButton');
+  pairButton = document.getElementById('pairButton');
   choice = document.getElementById('choice');
   nothing = document.getElementById('choice');
   aList = document.getElementById('aList');
 
   pickButton.addEventListener('click', pickOnClick );
-  NothingButton.addEventListener('click', NothingOnClick );
+  pairButton.addEventListener('click', pairOnClick );
   aList.addEventListener('click', aListOnClick );
 
   // build the attendance list
@@ -76,7 +76,7 @@ var pickOnClick = function (event) {
   }, 200);
 }
 
-var NothingOnClick = function (event) {
+var pairOnClick = function (event) {
   nothing.innerHTML = '&nbsp;'
   var rand = students.splice(Math.floor(Math.random() * students.length),1);
   var x = window.setInterval(() => {
