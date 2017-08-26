@@ -1,7 +1,9 @@
 var pickButton;
+var NothingButton
 var header;
 var body;
 var choice;
+var nothing;
 var aList;
 
 var students = [
@@ -32,43 +34,6 @@ var colors = [
   
 ];
 var cur = 0;
-
-var pairButton;
-var header;
-var body;
-var choice;
-var aList;
-
-var students = [
-  "Kevin",
-  "Jonathan",
-  "Angel",
-  "Eric",
-  "Janette",
-  "Desmond",
-  "Asiya",
-  "Monica",
-  "Susana",
-  "Deborah",
-  "Thomas",
-  "Julissa",
-  "Kyla",
-  "John",
-  "Shonica",
-  "Krystal"
-];
-
-var colors = [
-  'hotpink',
-  'orange',
-  'fuchsia', 0,
-  'lightblue', 0,
-  'black'
-  
-];
-var cur = 0;
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('hello rand.js');
@@ -76,12 +41,13 @@ document.addEventListener('DOMContentLoaded', () => {
   body = document.getElementById('body');
   header = document.getElementById('header');
   pickButton = document.getElementById('pickButton');
-  pairButton = document.getElementById('pickButton');
+  NothingButton = document.getElementById('NothingButton');
   choice = document.getElementById('choice');
+  nothing = document.getElementById('choice');
   aList = document.getElementById('aList');
 
   pickButton.addEventListener('click', pickOnClick );
-  pairButton.addEventListener('click', pairOnClick );
+  NothingButton.addEventListener('click', NothingOnClick );
   aList.addEventListener('click', aListOnClick );
 
   // build the attendance list
@@ -110,14 +76,14 @@ var pickOnClick = function (event) {
   }, 200);
 }
 
-var pairOnClick = function (event) {
-  choice.innerHTML = '&nbsp;'
+var NothingOnClick = function (event) {
+  nothing.innerHTML = '&nbsp;'
   var rand = students.splice(Math.floor(Math.random() * students.length),1);
   var x = window.setInterval(() => {
     if (colors[cur] === undefined) {
       window.clearInterval(x);
       cur = 0;
-      choice.innerText = rand;
+      nothing.innerText = rand;
       return;
     }
     if (colors[cur]) header.style.color = colors[cur];
