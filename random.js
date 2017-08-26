@@ -1,5 +1,5 @@
 var pickButton;
-var pairButton
+var nothingButton
 var header;
 var body;
 var choice;
