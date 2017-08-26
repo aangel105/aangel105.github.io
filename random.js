@@ -79,7 +79,7 @@ var pickOnClick = function (event) {
 }
 
 var aListOnClick = function (event) {
-  if (event.target.tagName === 'UL') {
+  if (event.target.tagName === 'LI') {
     event.target.style.textDecoration = 'line-through';
   }
 }
