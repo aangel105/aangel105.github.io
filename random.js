@@ -1,4 +1,38 @@
 var pickButton;
+var header;
+var body;
+var choice;
+var aList;
+
+var students = [
+  "Kevin",
+  "Jonathan",
+  "Angel",
+  "Eric",
+  "Janette",
+  "Desmond",
+  "Asiya",
+  "Monica",
+  "Susana",
+  "Deborah",
+  "Thomas",
+  "Julissa",
+  "Kyla",
+  "John",
+  "Shonica",
+  "Krystal"
+];
+
+var colors = [
+  'hotpink',
+  'orange',
+  'fuchsia', 0,
+  'lightblue', 0,
+  'black'
+  
+];
+var cur = 0;
+
 var pairButton;
 var header;
 var body;
@@ -33,6 +67,8 @@ var colors = [
   
 ];
 var cur = 0;
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('hello rand.js');
