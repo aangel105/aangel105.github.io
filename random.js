@@ -54,20 +54,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-function randomNoRepeats(students) {
-  var copy = students.slice(0);
-  return function() {
-    if (copy.length < 1) { copy = students.slice(0); }
-    var index = Math.floor(Math.random() * copy.length);
-    var item = copy[index];
-    copy.splice(index, 1);
-    return item;
-  };
-}
-
 var pickOnClick = function (event) {
   choice.innerHTML = '&nbsp;'
-  var rand = students[Math.floor(Math.random() * students.length)];
+  var random = Math.floor(Math.random() *  student.length);
+  console.log(random)
+  var item = student[random];
+    student.splice(random, 1);
+      return item
+  var rand = students
+  var removeStudent = []
+  
+  
+
+
   var x = window.setInterval(() => {
     if (colors[cur] === undefined) {
       window.clearInterval(x);
@@ -86,3 +85,4 @@ var aListOnClick = function (event) {
     event.target.style.textDecoration = 'line-through';
   }
 }
+
