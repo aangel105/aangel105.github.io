@@ -65,9 +65,6 @@ var pickOnClick = function (event) {
       return;
     }
   
-  
-
-
   var x = window.setInterval(() => {
     if (colors[cur] === undefined) {
       window.clearInterval(x);
