@@ -29,9 +29,7 @@ var colors = [
   'fuchsia', 0,
   'lightblue', 0,
   'black'
-  'red'
-  'purple'
-  'yellow'
+  
 ];
 var cur = 0;
 
@@ -94,3 +92,4 @@ var aListOnClick = function (event) {
     event.target.style.textDecoration = 'line-through';
   }
 }
+
