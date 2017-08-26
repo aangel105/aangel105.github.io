@@ -46,9 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // build the attendance list
   for (let i=0; i<students.length; i++) {
-    let li = document.createElement('li');
-    li.innerText = students[i];
-    aList.append(li);
+    let ul = document.createElement('ul');
+    ul.innerText = students[i];
+    aList.append(ul);
   }
 
 
@@ -79,7 +79,7 @@ var pickOnClick = function (event) {
 }
 
 var aListOnClick = function (event) {
-  if (event.target.tagName === 'LI') {
+  if (event.target.tagName === 'UL') {
     event.target.style.textDecoration = 'line-through';
   }
 }
