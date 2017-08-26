@@ -73,6 +73,22 @@ var pickOnClick = function (event) {
   }, 200);
 }
 
+var PairOnClick = function (event) {
+  choice.innerHTML = '&nbsp;'
+  var rand = students.splice(Math.floor(Math.random() * students.length),1);
+  var x = window.setInterval(() => {
+    if (colors[cur] === undefined) {
+      window.clearInterval(x);
+      cur = 0;
+      choice.innerText = rand;
+      return;
+    }
+    if (colors[cur]) header.style.color = colors[cur];
+    if (colors[cur-1]) body.style.backgroundColor = colors[cur-1];
+    cur += 1;
+  }, 200);
+}
+
 var aListOnClick = function (event) {
   if (event.target.tagName === 'LI') {
     event.target.style.textDecoration = 'line-through';
