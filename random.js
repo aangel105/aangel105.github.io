@@ -1,4 +1,5 @@
 var pickButton;
+var pairButton;
 var header;
 var body;
 var choice;
@@ -39,10 +40,12 @@ document.addEventListener('DOMContentLoaded', () => {
   body = document.getElementById('body');
   header = document.getElementById('header');
   pickButton = document.getElementById('pickButton');
+  pairButton = document.getElementById('pickButton');
   choice = document.getElementById('choice');
   aList = document.getElementById('aList');
 
   pickButton.addEventListener('click', pickOnClick );
+  pairButton.addEventListener('click', pairOnClick );
   aList.addEventListener('click', aListOnClick );
 
   // build the attendance list
