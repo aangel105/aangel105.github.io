@@ -29,6 +29,9 @@ var colors = [
   'fuchsia', 0,
   'lightblue', 0,
   'black'
+  'red'
+  'purple'
+  'yellow'
 ];
 var cur = 0;
 
@@ -46,9 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // build the attendance list
   for (let i=0; i<students.length; i++) {
-    let ul = document.createElement('ul');
-    ul.innerText = students[i];
-    aList.append(ul);
+    let li = document.createElement('li');
+    li.innerText = students[i];
+    aList.append(li);
   }
 
 
@@ -65,12 +68,6 @@ var pickOnClick = function (event) {
       return;
     }
   
-  var x = window.setInterval(() => {
-    if (colors[cur] === undefined) {
-      window.clearInterval(x);
-      cur = 0;
-      choice.innerText = rand;
-      return;
     }
     if (colors[cur]) header.style.color = colors[cur];
     if (colors[cur-1]) body.style.backgroundColor = colors[cur-1];
