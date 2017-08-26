@@ -56,13 +56,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 var pickOnClick = function (event) {
   choice.innerHTML = '&nbsp;'
-  var random = Math.floor(Math.random() *  student.length);
-  console.log(random)
-  var item = student[random];
-    student.splice(random, 1);
-      return item
-  var rand = students
-  var removeStudent = []
+  var rand = students[Math.floor(Math.random() * students.length)];
+  var x = window.setInterval(() => {
+    if (colors[cur] === undefined) {
+      window.clearInterval(x);
+      cur = 0;
+      choice.innerText = rand;
+      return;
+    }
   
   
 
