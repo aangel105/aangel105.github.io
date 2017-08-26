@@ -74,7 +74,7 @@ var pickOnClick = function (event) {
   }, 200);
 }
 
-var PairOnClick = function (event) {
+var pairOnClick = function (event) {
   choice.innerHTML = '&nbsp;'
   var rand = students.splice(Math.floor(Math.random() * students.length),1);
   var x = window.setInterval(() => {
